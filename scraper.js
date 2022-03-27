@@ -1,30 +1,147 @@
-//import fetch from "node-fetch";
+import fetch from "node-fetch";
 import cheerio from "cheerio";
 
 // movie title to search will be appended to the end of this URL
-const url = "https://www.imdb.com/find?s=tt&ttype=ft&ref_=fn_ft&q=";
+const searchUrl = "https://www.imdb.com/find?s=tt&ttype=ft&ref_=fn_ft&q=";
+const movieUrl = "https://www.imdb.com/title/";
 
-searchMovie(searchedMovieTitle);
+const searchCache = {};
+const movieCache = {};
 
-// make a request for the search results of the movieTitle
-function searchMovie(movieTitle) {
-  let response = window
-    .fetch(`${url}${movieTitle}`)
+function searchMovies(searchTerm) {
+  // If search page has already been visited, return it from cache
+  if (searchCache[searchTerm]) {
+    console.log("Serving from cache:", searchTerm);
+    return Promise.resolve(searchCache[searchTerm]);
+  }
+
+  // Retrieves results page data
+  return fetch(`${searchUrl}${searchTerm}`)
     .then((response) => response.text())
     .then((body) => {
       const movies = [];
       const $ = cheerio.load(body);
-      $(`.findResult`).each(function (i, element) {
+      $(".findResult").each(function (i, element) {
         const $element = $(element);
         const $image = $element.find("td a img");
         const $title = $element.find("td.result_text a");
+        const imdbID = $title.attr("href").match(/title\/(.*)\//)[1];
+
         const movie = {
           image: $image.attr("src"),
           title: $title.text(),
+          imdbID,
         };
         movies.push(movie);
       });
 
+      // Add searchTerm to cache
+      searchCache[searchTerm] = movies;
+
       return movies;
     });
 }
+
+function getMovie(imdbID) {
+  // If movie page has already been visited, return it from cache
+  console.log(imdbID);
+  if (movieCache[imdbID]) {
+    console.log("Serving from cache:", imdbID);
+    return Promise.resolve(movieCache[imdbID]);
+  }
+
+  //console.log(imdbID);
+
+  return fetch(`${movieUrl}${imdbID}`)
+    .then((response) => response.text())
+    .then((body) => {
+      const $ = cheerio.load(body);
+      const $title = $(".title_wrapper h1");
+
+      const title = $title
+        .first()
+        .contents()
+        .filter(function () {
+          return this.type === "text";
+        })
+        .text()
+        .trim();
+
+      const rating = $('meta[itemProp="contentRating"]').attr("content");
+      const runTime = $('time[timeProp="duration"]')
+        .first()
+        .contents()
+        .filter(function () {
+          return this.type === "text";
+        })
+        .text()
+        .trim();
+
+      const genres = [];
+      $('span[itemProp="genre"]').each(function (i, element) {
+        const genre = $(element).text();
+        genres.push(genre);
+      });
+
+      const datePublished = $('meta[itemProp="datePublished"]').attr("content");
+      const imdbRating = $('span[itemProp="ratingValue"]').text();
+      const poster = $("div.poster a img").attr("src");
+      const summary = $("div.summary_text").text().trim();
+
+      function getItem(itemArray) {
+        return function (i, element) {
+          const item = $(element).text().trim();
+          itemArray.push(item);
+        };
+      }
+
+      const directors = [];
+      $('span[itemProp="director"]').each(getItem(directors));
+
+      const writers = [];
+      $('.credit_summary_item span[itemProp="creator"]').each(getItem(writers));
+
+      const stars = [];
+      $('.credit_summary_item span[itemProp="actors"]').each(getItem(stars));
+
+      const storyLine = $('#titleStoryLine div[itemProp="description"] p')
+        .text()
+        .trim();
+
+      const companies = [];
+      $('span[itemType="http://schema.org/Organization"]').each(
+        getItem(companies)
+      );
+
+      const trailer = $('a[itemProp="trailer"]').attr("href");
+
+      const movie = {
+        imdbID,
+        title,
+        rating,
+        runTime,
+        genres,
+        datePublished,
+        imdbRating,
+        poster,
+        summary,
+        directors,
+        writers,
+        stars,
+        storyLine,
+        companies,
+        trailer: `https://www.imdb.com${trailer}`,
+      };
+
+      movieCache[imdbID] = movie;
+
+      return movie;
+    });
+}
+
+// module.exports = {
+//   searchMovies,
+//   getMovie,
+// };
+
+export { searchMovies, getMovie };
