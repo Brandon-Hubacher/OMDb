@@ -9,6 +9,7 @@ const searchCache = {};
 const movieCache = {};
 
 function searchMovies(searchTerm) {
+  console.log("inside searchMovies");
   // If search page has already been visited, return it from cache
   if (searchCache[searchTerm]) {
     console.log("Serving from cache:", searchTerm);
@@ -43,15 +44,16 @@ function searchMovies(searchTerm) {
 }
 
 function getMovie(imdbID) {
+  console.log("HELLO");
   // If movie page has already been visited, return it from cache
   console.log(imdbID);
-  if (movieCache[imdbID]) {
-    console.log("Serving from cache:", imdbID);
-    return Promise.resolve(movieCache[imdbID]);
-  }
+  // if (movieCache[imdbID]) {
+  //   console.log("Serving from cache:", imdbID);
+  //   return Promise.resolve(movieCache[imdbID]);
+  // }
 
-  //console.log(imdbID);
-
+  console.log("LALALA");
+  console.log(`${movieUrl}${imdbID}`);
   return fetch(`${movieUrl}${imdbID}`)
     .then((response) => response.text())
     .then((body) => {
@@ -66,6 +68,8 @@ function getMovie(imdbID) {
         })
         .text()
         .trim();
+      console.log("About to log the title");
+      console.log(title);
 
       const rating = $('meta[itemProp="contentRating"]').attr("content");
       const runTime = $('time[timeProp="duration"]')

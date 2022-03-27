@@ -1,9 +1,11 @@
 import express from "express";
+import cors from "cors";
 
 // There was difficulty importing because I had to figure out the new import and export functionality
 import { searchMovies, getMovie } from "./scraper.js";
 
 const app = express();
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.json({
