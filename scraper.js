@@ -113,7 +113,6 @@ function getMovie(imdbID) {
       const rating = $(
         "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-c7f03a63-0.kUbSjY > section > div:nth-child(4) > section > section > div.sc-94726ce4-0.cMYixt > div.sc-94726ce4-1.iNShGo > div > ul > li:nth-child(2) > span"
       ).text();
-      console.log(rating);
 
       const runTime = $(
         "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-c7f03a63-0.kUbSjY > section > div:nth-child(4) > section > section > div.sc-94726ce4-0.cMYixt > div.sc-94726ce4-1.iNShGo > div > ul > li:nth-child(3)"
@@ -142,7 +141,7 @@ function getMovie(imdbID) {
 
       const imdbRating = $(
         'div[data-testid="hero-rating-bar__aggregate-rating__score"] > span'
-      ).textContent;
+      ).text();
       //const imdbRating = $('span[itemProp="ratingValue"]').text();
 
       const poster = $(

@@ -4,10 +4,38 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="searchPage.css" />
+    <link rel="stylesheet" href="/navigationBar.css" />
     <title>Search Page</title>
   </head>
   <body>
-    <h1>Search Page</h1>
+    <img id="logo" src="../images/logo.png" alt="LOGO" />
+    <nav id="nav">
+      <ul id="nav-links">
+        <li>
+          <a href="/home/checkpoint1.html">Home</a>
+        </li>
+        <li>
+          <a href="/genres/genres.html">Genres</a>
+        </li>
+        <li>
+          <a href="/favorites/favorites.html">Favorites</a>
+        </li>
+        <li>
+          <a href="/watched movies/watched_movies.html">Watched Movies</a>
+        </li>
+        <li>
+          <a href="/contact/contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <div id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
     <form action="checkpoint1.php" method="get">
       <div id="topnavContainer">
         <input
@@ -23,7 +51,11 @@
         <div id="movie-slider"></div>
       </div>
     </form>
-    <ul id="results"></ul>
+    <div id="flexContainer">
+      <div id="resultsContainer">
+        <ul id="results"></ul>
+      </div>
+    </div>
 
     <script src="/home/checkpoint1.js" charset="utf-8"></script>
 
@@ -47,5 +79,6 @@
         }
       });
     </script>
+    <script src="/omdb.js"></script>
   </body>
 </html>

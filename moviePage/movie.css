@@ -1,0 +1,11 @@
+body {
+  background: gray;
+}
+
+.trailer img {
+  float: left;
+}
+
+.rightOfTrailer > span {
+  clear: both;
+}

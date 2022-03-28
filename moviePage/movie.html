@@ -4,11 +4,81 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="movie.css" />
+    <link rel="stylesheet" href="/navigationBar.css" />
     <!-- Make the title dynamic on the title of the movie -->
     <title>Movie</title>
   </head>
   <body>
-    <h1>Movie</h1>
+    <img id="logo" src="../images/logo.png" alt="LOGO" />
+    <nav id="nav">
+      <ul id="nav-links">
+        <li>
+          <a href="/home/checkpoint1.html">Home</a>
+        </li>
+        <li>
+          <a href="/genres/genres.html">Genres</a>
+        </li>
+        <li>
+          <a href="/favorites/favorites.html">Favorites</a>
+        </li>
+        <li>
+          <a href="/watched movies/watched_movies.html">Watched Movies</a>
+        </li>
+        <li>
+          <a href="/contact/contact.html">Contact Us</a>
+        </li>
+      </ul>
+
+      <div id="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
+    </nav>
+
+    <form id="searchForm" action="checkpoint1.php" method="get">
+      <div id="topnavContainer">
+        <input
+          id="search"
+          type="text"
+          name="searchTerm"
+          placeholder="Search OMDb: Movies"
+        />
+        <a href="landingpage.html">Sign Up</a>
+        <a href="landingpage.html">Login In</a>
+      </div>
+      <div id="content">
+        <div id="movie-slider"></div>
+      </div>
+    </form>
+
+    <div class="row1">
+      <span id="title"></span>
+      <span> | </span>
+      <span id="imdbRating"></span>
+    </div>
+    <div class="row2">
+      <span id="datePublished"></span>
+      <span> | </span>
+      <span id="contentRating"></span>
+      <span> | </span>
+      <span id="runTime"></span>
+    </div>
+    <!-- Float this left and have genre and summary floated right -->
+    <div class="trailer">
+      TRAILER
+      <img id="poster" src="" alt="" />
+    </div>
+
+    <div class="rightOfTrailer">
+      <span id="genres">
+        Genres
+        <ul id="genresList"></ul>
+      </span>
+      <span id="summary"></span>
+    </div>
     <script src="movie.js"></script>
+    <script src="/omdb.js"></script>
   </body>
 </html>

@@ -24,26 +24,7 @@ window.onload = function () {
 
   const BASE_URL = "https://polar-woodland-00821.herokuapp.com/";
 
-  // form.addEventListener("keydown", function (event) {
-  //   console.log("key was pressed");
-  //   // TODO: Don't run if search bar is empty
-  //   if (event.code === "Enter") {
-  //     console.log("Enter was pressed");
-  //     //location.assign("/searchPage/searchPage.html");
-  //     document.location.href = "/searchPage/searchPage.html";
-  //     console.log("should now be on search page");
-  //     processSearch(event);
-  //     event.preventDefault();
-  //   }
-  // });
-
   getSearchResults(searchTerm).then(showResults);
-
-  function processSearch(event) {
-    //const searchTerm = searchInput.value;
-    getSearchResults(searchTerm).then(showResults);
-    // moveListToSearchPage();
-  }
 
   function getSearchResults(searchTerm) {
     return fetch(`${BASE_URL}search/${searchTerm}`).then((res) => res.json());
@@ -65,9 +46,4 @@ window.onload = function () {
       resultsList.appendChild(li);
     });
   }
-
-  // function moveListToSearchPage() {
-  //   resultsList.location = "/searchPage/searchPage.html";
-  //   resultsList.
-  // }
 };
