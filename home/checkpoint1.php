@@ -53,14 +53,8 @@
         <div id="movie-slider"></div>
       </div>
     </form>
+    <script src="checkpoint1.js" charset="utf-8"></script>
 
-    <?php
-      //echo $_GET["searchTerm"];
-      $search = $_GET["searchTerm"];
-    ?>
-    <script type="text/javascript">let searchedMovieTitle = "<?= $search ?>";</script>
-    <!-- <script type="module" src="/scraper.js"></script> -->
-    <script type="text/javascript" src="/dist/bundle.js"></script>
 
     <div id="table1">
       <script src="/hover.js"></script>
