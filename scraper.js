@@ -141,7 +141,9 @@ function getMovie(imdbID) {
 
       const imdbRating = $(
         'div[data-testid="hero-rating-bar__aggregate-rating__score"] > span'
-      ).text();
+      )
+        .text()
+        .split("/")[0];
       //const imdbRating = $('span[itemProp="ratingValue"]').text();
 
       const poster = $(
