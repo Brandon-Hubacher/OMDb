@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Search Page</title>
+  </head>
+  <body>
+    <h1>Search Page</h1>
+    <form action="checkpoint1.php" method="get">
+      <div id="topnavContainer">
+        <input
+          id="search"
+          type="text"
+          name="searchTerm"
+          placeholder="Search OMDb: Movies"
+        />
+        <a href="landingpage.html">Sign Up</a>
+        <a href="landingpage.html">Login In</a>
+      </div>
+      <div id="content">
+        <div id="movie-slider"></div>
+      </div>
+    </form>
+    <ul id="results"></ul>
+
+    <script src="/home/checkpoint1.js" charset="utf-8"></script>
+
+    <script>
+      document.addEventListener("click", function (event) {
+        var target = event.target;
+
+        if (target.tagName === "A") {
+          console.log("pressed A");
+
+          var imdbID = target.href.split("=")[1];
+          console.log("href: " + target.href);
+          console.log("imdbID: " + imdbID);
+          var url =
+            "/moviePage/movie.html?imdbID=" + encodeURIComponent(imdbID);
+
+          document.location.href = url;
+
+          // Why is this required to make the page be directed to the proper path?
+          event.preventDefault();
+        }
+      });
+    </script>
+  </body>
+</html>

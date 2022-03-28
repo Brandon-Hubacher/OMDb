@@ -38,7 +38,7 @@
       </div>
     </nav>
 
-    <form action="checkpoint1.php" method="get">
+    <form id="searchForm" action="checkpoint1.php" method="get">
       <div id="topnavContainer">
         <input
           id="search"
@@ -53,7 +53,36 @@
         <div id="movie-slider"></div>
       </div>
     </form>
-    <script src="checkpoint1.js" charset="utf-8"></script>
+    <script>
+      console.log("EMBEDDED JAVASCRIPT");
+      const form = document.getElementById("searchForm");
+      const searchInput = document.querySelector("input");
+      //var resultsList = document.querySelector("#results");
+      //resultsList.location.href = "/searchPage/searchPage.html";
+
+      //const BASE_URL = "https://polar-woodland-00821.herokuapp.com/";
+
+      //console.log("iside checkpoint1.js");
+
+      form.addEventListener("keydown", function (event) {
+        console.log("key was pressed");
+        // TODO: Don't run if search bar is empty
+        if (event.code === "Enter") {
+          console.log("enter has been pressed");
+          var searchTerm = searchInput.value;
+          console.log("the search term is: " + searchTerm);
+          var url = "/searchPage/searchPage.html?search=" + encodeURIComponent(searchTerm);
+
+          document.location.href = url;
+          event.preventDefault();
+        }
+      });
+    </script>
+
+
+    <!-- <ul id="results"></ul> -->
+
+    <!-- <script src="checkpoint1.js" charset="utf-8"></script> -->
 
 
     <div id="table1">
