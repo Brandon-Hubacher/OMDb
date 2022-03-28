@@ -6,6 +6,6 @@ body {
   float: left;
 }
 
-.rightOfTrailer > span {
+.rightOfTrailer {
   clear: both;
 }

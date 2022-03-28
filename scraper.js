@@ -10,7 +10,6 @@ const searchCache = {};
 const movieCache = {};
 
 function searchMovies(searchTerm) {
-  console.log("inside searchMovies");
   // If search page has already been visited, return it from cache
   if (searchCache[searchTerm]) {
     console.log("Serving from cache:", searchTerm);
@@ -43,49 +42,6 @@ function searchMovies(searchTerm) {
       return movies;
     });
 }
-
-// function getMovie(imdbID) {
-//   // If movie page has already been visited, return it from cache
-//   // if (movieCache[imdbID]) {
-//   //   console.log("Serving from cache:", imdbID);
-//   //   return Promise.resolve(movieCache[imdbID]);
-//   // }
-//   return fetch(`${movieUrl}${imdbID}`)
-//     .then((response) => response.text())
-//     .then((body) => {
-//       const $ = cheerio.load(body);
-//       //const $title = $(".title_wrapper h1");
-//       const $title = $(".sc-94726ce4-1 h1");
-
-//       const title = $title
-//         .first()
-//         .contents()
-//         .filter(function () {
-//           return this.type === "text";
-//         })
-//         .text()
-//         .trim();
-
-//       // const poster = $(
-//       //   `#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-c7f03a63-0.kUbSjY > section > div:nth-child(4) > section > section > div.sc-1cdfe45a-2.eHejrG > div.sc-1cdfe45a-3.eIAmdj > div > div.sc-43e10848-1.hNvLDX > div > div.ipc-media.ipc-media--poster-27x40.ipc-image-media-ratio--poster-27x40.ipc-media--baseAlt.ipc-media--poster-l.ipc-poster__poster-image.ipc-media__img`
-//       // ).attr("src");
-
-//       console.log(
-//         $(
-//           "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-c7f03a63-0.kUbSjY > section > div:nth-child(4) > section > section > div.sc-1cdfe45a-2.eHejrG > div.sc-1cdfe45a-3.eIAmdj > div > div.sc-43e10848-1.hNvLDX > div > div.ipc-media.ipc-media--poster-27x40.ipc-image-media-ratio--poster-27x40.ipc-media--baseAlt.ipc-media--poster-l.ipc-poster__poster-image.ipc-media__img a img"
-//         ).attr("src")
-//       );
-
-//       const movie = {
-//         imdbID,
-//         title,
-//       };
-
-//       movieCache[imdbID] = movie;
-
-//       return movie;
-//     });
-// }
 
 function getMovie(imdbID) {
   // If movie page has already been visited, return it from cache
@@ -131,6 +87,7 @@ function getMovie(imdbID) {
         "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-c7f03a63-0.kUbSjY > section > div:nth-child(4) > section > section > div.sc-1cdfe45a-2.eHejrG > div.sc-1cdfe45a-10.cuzXyh > div.sc-1cdfe45a-4.wrDNM > div.sc-16ede01-8.hXeKyz.sc-1cdfe45a-11.eVPKIU > div"
       ).each(function (i, element) {
         const genre = $(element).text();
+        console.log(genre);
         genres.push(genre);
       });
 
