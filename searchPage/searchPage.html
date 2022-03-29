@@ -5,11 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="searchPage.css" />
-    <link rel="stylesheet" href="/navigationBar.css" />
+    <link rel="stylesheet" href="/navBar.css" />
     <title>Search Page</title>
   </head>
   <body>
-    <a href="../home/checkpoint1.php" class="logoLink">
+    <a href="../homePage/homePage.php" class="logoLink">
       <img id="logo" src="../images/logo.png" alt="LOGO" />
     </a>
     <nav id="nav">
@@ -59,7 +59,7 @@
       </div>
     </div>
 
-    <script src="/home/checkpoint1.js" charset="utf-8"></script>
+    <script src="/homePage/homePage.js" charset="utf-8"></script>
 
     <script>
       document.addEventListener("click", function (event) {
@@ -73,7 +73,7 @@
           console.log("href: " + target.href);
           console.log("imdbID: " + imdbID);
           var url =
-            "/moviePage/movie.html?imdbID=" + encodeURIComponent(imdbID);
+            "/moviePage/moviePage.html?imdbID=" + encodeURIComponent(imdbID);
 
           document.location.href = url;
 
@@ -82,6 +82,6 @@
         }
       });
     </script>
-    <script src="/omdb.js"></script>
+    <script src="/navBar.js"></script>
   </body>
 </html>

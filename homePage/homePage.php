@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="checkpoint1.css" />
-    <link rel="stylesheet" href="/navigationBar.css" />
+    <link rel="stylesheet" href="homePage.css" />
+    <link rel="stylesheet" href="/navBar.css" />
     <title>OMDB</title>
     <meta name="description" content="Genres page" />
   </head>
@@ -40,7 +40,7 @@
       </div>
     </nav>
 
-    <form id="searchForm" action="checkpoint1.php" method="get">
+    <form id="searchForm" action="homePage.php" method="get">
       <div id="topnavContainer">
         <input
           id="search"
@@ -48,8 +48,8 @@
           name="searchTerm"
           placeholder="Search OMDb: Movies"
         />
-        <a href="landingpage.html">Sign Up</a>
-        <a href="landingpage.html">Login In</a>
+        <a href="/dummyPage.html">Sign Up</a>
+        <a href="/dummyPage.html">Login In</a>
       </div>
       <div id="content">
         <div id="movie-slider"></div>
@@ -186,6 +186,6 @@
         </div>
       </footer>
     </div>
-    <script src="/omdb.js"></script>
+    <script src="/navBar.js"></script>
   </body>
 </html>

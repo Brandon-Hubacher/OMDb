@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="contact.css" />
+    <link rel="stylesheet" href="contactPage.css" />
     <title>Genres</title>
-    <meta name="description" content="Genres page">
+    <meta name="description" content="Genres page" />
   </head>
   <body>
-    <img id="logo" src="./images/logo.png" alt="LOGO" />
+    <img id="logo" src="../images/logo.png" alt="LOGO" />
     <nav id="nav">
       <ul id="nav-links">
         <li>
@@ -48,77 +48,102 @@
 
     <div id="container">
       <div id="top">
-      <h1>Contact Us</h1>
+        <h1>Contact Us</h1>
       </div>
 
       <div id="leftnav">
         <table>
           <tr>
             <td id="blurb">
-              We hope you enjoyed navigating our
-              IMDB clone, OMDB. In short, we are
-              4 UT undergrads aspiring to step foot
-              into the software industry. Feel free
-              to reach out to us with any 
-              comments, questions, or concerns!
+              We hope you enjoyed navigating our IMDB clone, OMDB. In short, we
+              are 4 UT undergrads aspiring to step foot into the software
+              industry. Feel free to reach out to us with any comments,
+              questions, or concerns!
             </td>
           </tr>
           <tr>
-            <td> <img src="./images/random.jpeg" alt="Picture of Us" width='120' height='100'></td>
+            <td>
+              <img
+                src="./images/random.jpeg"
+                alt="Picture of Us"
+                width="120"
+                height="100"
+              />
+            </td>
           </tr>
         </table>
       </div>
 
       <div id="subleftnav">
-        <form method = "POST" action = "http://www.cknuckles.com/cgi/echo.cgi">
+        <form method="POST" action="http://www.cknuckles.com/cgi/echo.cgi">
+          <p>
+            <label>
+              Full Name: <br />
+              <input name="name" type="text" size="30" />
+            </label>
+          </p>
 
           <p>
-              <label> Full Name: <br>
-              <input name = "name" type = "text" size = "30" /> </label>
+            <label>
+              E-mail: <br />
+              <input name="email" type="text" size="30" />
+            </label>
           </p>
-        
+
           <p>
-              <label> E-mail: <br>
-              <input name = "email" type = "text" size = "30" /> </label>
+            <label>
+              Message: <br />
+              <textarea name="comments" rows="4" cols="36">
+ Type here </textarea
+              >
+            </label>
           </p>
-        
-          <p>
-              <label> Message: <br />
-                <textarea name = "comments" rows = "4" cols = "36"> Type here </textarea>
-              </label>
-          </p>
-        
+
           <p>
             <button type="reset">Send</button>
           </p>
-        
         </form>
       </div>
 
-        <div id="subrightnav">
-          <table >
-            <tr>
-              <td>
-                <h3>Contact</h3> <br>
-                <li>brandon.hubacher@gmail.com</li> <br>
-                <li>komail.wahab@gmail.com</li><br>
-                <li>tarannudurumati@gmail.com</li><br>
-                <li>zachary.moss@utexas.edu</li>
-              </td>
-            </tr>
-            <tr>
-              <td> 
-                <a href="https://www.linkedin.com/notifications/">
-                  <img id="linkedIn_logo" src="./images/linkedin_logo.png" alt="LinkedIn Logo" width="40" height="40"/>
-                </a>
-                <a href="https://github.com/Brandon-Hubacher/OMDb">
-                  <img id="Github_logo" src="./images/github_logo.png" alt="GitHub Logo" width="40" height="40"/> 
-                </a>
-              </td>
-            </tr>
-          </table>
-        </div>
+      <div id="subrightnav">
+        <table>
+          <tr>
+            <td>
+              <h3>Contact</h3>
+              <br />
+              <li>brandon.hubacher@gmail.com</li>
+              <br />
+              <li>komail.wahab@gmail.com</li>
+              <br />
+              <li>tarannudurumati@gmail.com</li>
+              <br />
+              <li>zachary.moss@utexas.edu</li>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <a href="https://www.linkedin.com/notifications/">
+                <img
+                  id="linkedIn_logo"
+                  src="./images/linkedin_logo.png"
+                  alt="LinkedIn Logo"
+                  width="40"
+                  height="40"
+                />
+              </a>
+              <a href="https://github.com/Brandon-Hubacher/OMDb">
+                <img
+                  id="Github_logo"
+                  src="./images/github_logo.png"
+                  alt="GitHub Logo"
+                  width="40"
+                  height="40"
+                />
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
     </div>
-
   </body>
 </html>
