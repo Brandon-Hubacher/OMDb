@@ -63,8 +63,9 @@
       document.addEventListener("click", function (event) {
         var target = event.target;
 
-        if (target.tagName === "A") {
-          console.log("pressed A");
+        // TODO: Don't search for movie if link is in navigation bar
+        if (target.tagName === "A" && !(target.href.split(".")[1] > 4)) {
+          console.log(target.href.split("."));
 
           var imdbID = target.href.split("=")[1];
           console.log("href: " + target.href);

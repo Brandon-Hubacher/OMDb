@@ -81,15 +81,18 @@ function getMovie(imdbID) {
         .text()
         .trim();
 
-      // TODO: Make comma separated array!
+      // TODO: Do this in a more efficient way!!!
       const genres = [];
       $(
         "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-c7f03a63-0.kUbSjY > section > div:nth-child(4) > section > section > div.sc-1cdfe45a-2.eHejrG > div.sc-1cdfe45a-10.cuzXyh > div.sc-1cdfe45a-4.wrDNM > div.sc-16ede01-8.hXeKyz.sc-1cdfe45a-11.eVPKIU > div"
-      ).each(function (i, element) {
-        // const genre = $(element).firstChild.firstChild.text();
-        const genre = $(element).text();
-        genres.push(genre);
-      });
+      )
+        .children()
+        .each((i, element) => {
+          const sepString = element.attribs.href.split(/[=&]/);
+          const genre = sepString[1];
+          genres.push(genre);
+        });
+      console.log(genres);
 
       //const datePublished = $('meta[itemProp="datePublished"]').attr("content");
       const datePublished = $(
@@ -123,12 +126,12 @@ function getMovie(imdbID) {
       }
 
       // TODO: Add directors
-      const directors = [];
-      $('span[itemProp="director"]').each(getItem(directors));
+      // const directors = [];
+      // $('span[itemProp="director"]').each(getItem(directors));
 
       // TODO: Add writers
-      const writers = [];
-      $('.credit_summary_item span[itemProp="creator"]').each(getItem(writers));
+      // const writers = [];
+      // $('.credit_summary_item span[itemProp="creator"]').each(getItem(writers));
 
       const stars = [];
       $(
