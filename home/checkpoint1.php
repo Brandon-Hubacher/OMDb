@@ -12,7 +12,8 @@
 
   <body>
     <!-- NAVIGATION Link-->
-    <img id="logo" src="../images/logo.png" alt="LOGO" />
+    <a href="/home/checkpoint1.php" class="logoLink"><img id="logo" src="../images/logo.png" alt="LOGO" /></a>
+
     <nav id="nav">
       <ul id="nav-links">
         <li>

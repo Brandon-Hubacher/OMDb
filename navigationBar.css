@@ -1,7 +1,15 @@
-#logo {
+.logoLink {
   position: absolute;
   top: 0;
   left: 0;
+  object-fit: contain;
+}
+
+#logo {
+  position: absolute;
+  /* top: 0; */
+  /* left: 0; */
+  object-fit: contain;
 }
 
 #topnavContainer {
