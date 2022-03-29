@@ -1,4 +1,5 @@
 window.onload = function () {
+  console.log("in checkpoint1");
   var url = document.location.href;
   var params = url.split("?")[1].split("&");
   var data = {};
@@ -13,6 +14,7 @@ window.onload = function () {
   for (let i = 0, l = searchArr.length; i < l; ++i) {
     searchTerm += searchArr[i];
   }
+  console.log(searchTerm);
   //document.getElementById('')
 
   const form = document.querySelector("form");
@@ -40,6 +42,7 @@ window.onload = function () {
       a.href = "/movie.html?imdbID=" + movie.imdbID;
       li.appendChild(a);
       console.log(li);
+      //console.log(li.parentElement);
       resultsList.appendChild(li);
     });
   }
