@@ -83,6 +83,11 @@ function getMovie(imdbID) {
 
       // TODO: Do this in a more efficient way!!!
       const genres = [];
+
+      const genre = $(
+        "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-c7f03a63-0.kUbSjY > section > div:nth-child(4) > section > section > div.sc-1cdfe45a-2.eHejrG > div.sc-1cdfe45a-10.cuzXyh > div.sc-1cdfe45a-4.wrDNM > div.sc-16ede01-8.hXeKyz.sc-1cdfe45a-11.eVPKIU > div"
+      ).text();
+      genres.push(genre);
       // $(
       //   "#__next > main > div > section.ipc-page-background.ipc-page-background--base.sc-c7f03a63-0.kUbSjY > section > div:nth-child(4) > section > section > div.sc-1cdfe45a-2.eHejrG > div.sc-1cdfe45a-10.cuzXyh > div.sc-1cdfe45a-4.wrDNM > div.sc-16ede01-8.hXeKyz.sc-1cdfe45a-11.eVPKIU > div"
       // )
