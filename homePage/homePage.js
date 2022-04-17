@@ -25,12 +25,15 @@ window.onload = function () {
   getSearchResults(searchTerm).then(showResults);
 
   function getSearchResults(searchTerm) {
+    console.log("Bad search");
     return fetch(`${BASE_URL}search/${searchTerm}`).then((res) => res.json());
   }
 
   function showResults(results) {
-    console.log("inside showResults");
+    console.log("results");
+    console.log(results);
     results.forEach((movie) => {
+      console.log(movie);
       const li = document.createElement("li");
       const img = document.createElement("img");
       li.appendChild(img);
@@ -39,7 +42,7 @@ window.onload = function () {
       a.textContent = movie.title;
       a.href = "/movie.html?imdbID=" + movie.imdbID;
       li.appendChild(a);
-      console.log(li);
+      // console.log(li);
       resultsList.appendChild(li);
     });
   }
