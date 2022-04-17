@@ -15,6 +15,7 @@ app.get("/", (req, res) => {
 
 // path will look like: /search/star wars
 app.get("/search/:title", (req, res) => {
+  console.log("searching");
   searchMovies(req.params.title).then((movies) => {
     res.json(movies);
   });
