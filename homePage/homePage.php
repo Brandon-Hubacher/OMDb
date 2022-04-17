@@ -1,3 +1,8 @@
+<?php
+  session_start();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="homePage.css" />
-    <link rel="stylesheet" href="/navBar.css"/>
+    <link rel="stylesheet" href="../navBar.css"/>
     <title>OMDB</title>
     <meta name="description" content="Genres page">
   </head>
@@ -16,26 +21,26 @@
 
 
     <!-- NAVIGATION Link-->
-    <a href="/homePage/homePage.php" class="logoLink"
+    <a href="../homePage/homePage.php" class="logoLink"
       ><img id="logo" src="../images/logo.png" alt="LOGO"
     /></a>
 
     <nav id="nav">
       <ul id="nav-links">
         <li>
-          <a href="/homePage/homePage.php">Home</a>
+          <a href="../homePage/homePage.php">Home</a>
         </li>
         <li>
-          <a href="/genresPage/genresPage.html">Genres</a>
+          <a href="../genresPage/genresPage.html">Genres</a>
         </li>
         <li>
-          <a href="/favoritesPage/favoritesPage.html">Favorites</a>
+          <a href="../favoritesPage/favoritesPage.html">Favorites</a>
         </li>
         <li>
-          <a href="/watchedMoviesPage/watchedMoviesPage.html">Watched Movies</a>
+          <a href="../watchedMoviesPage/watchedMoviesPage.html">Watched Movies</a>
         </li>
         <li>
-          <a href="/contactPage/contactPage.html">Contact Us</a>
+          <a href="../contactPage/contactPage.html">Contact Us</a>
         </li>
       </ul>
 
@@ -54,8 +59,8 @@
           name="searchTerm"
           placeholder="Search OMDb: Movies"
         />
-        <a href="/dummyPage.html">Sign Up</a>
-        <a href="/dummyPage.html">Login In</a>
+        <a href="../auth/register/registerPage.php">Sign Up</a>
+        <a href="../auth/login/loginPage.php">Login In</a>
       </div>
       <div id="content">
         <div id="movie-slider"></div>
@@ -72,7 +77,7 @@
           console.log("enter has been pressed");
           var searchTerm = searchInput.value;
           console.log("the search term is: " + searchTerm);
-          var url = "/searchPage/searchPage.html?search=" + encodeURIComponent(searchTerm);
+          var url = "../searchPage/searchPage.html?search=" + encodeURIComponent(searchTerm);
 
           document.location.href = url;
           event.preventDefault();
@@ -335,6 +340,6 @@
           </div>
       </footer>
   </div>
-  <script src="/navBar.js"></script>
+  <script src="../navBar.js"></script>
 </body>
 </html>

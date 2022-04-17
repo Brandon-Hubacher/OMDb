@@ -1,33 +1,32 @@
 <!DOCTYPE html>
 <html>
-<<<<<<< HEAD
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="contactPage.css" />
-    <link rel="stylesheet" href="/navBar.css" />
+    <link rel="stylesheet" href="../navBar.css" />
   </head>
   <body>
     <!-- NAVIGATION Link-->
-    <a href="/homePage/homePage.php" class="logoLink"
+    <a href="../homePage/homePage.php" class="logoLink"
       ><img id="logo" src="../images/logo.png" alt="LOGO"
     /></a>
 
     <nav id="nav">
       <ul id="nav-links">
         <li>
-          <a href="/homePage/homePage.php">Home</a>
+          <a href="../homePage/homePage.php">Home</a>
         </li>
         <li>
-          <a href="/genresPage/genresPage.html">Genres</a>
+          <a href="../genresPage/genresPage.html">Genres</a>
         </li>
         <li>
-          <a href="/favoritesPage/favoritesPage.html">Favorites</a>
+          <a href="../favoritesPage/favoritesPage.html">Favorites</a>
         </li>
         <li>
-          <a href="/watchedMoviesPage/watchedMoviesPage.html">Watched Movies</a>
+          <a href="../watchedMoviesPage/watchedMoviesPage.html">Watched Movies</a>
         </li>
         <li>
-          <a href="/contactPage/contactPage.html">Contact Us</a>
+          <a href="../contactPage/contactPage.html">Contact Us</a>
         </li>
       </ul>
 
@@ -46,13 +45,31 @@
           name="searchTerm"
           placeholder="Search OMDb: Movies"
         />
-        <a href="/dummyPage.html">Sign Up</a>
-        <a href="/dummyPage.html">Login In</a>
+        <a href="../auth/register/registerPage.php">Sign Up</a>
+        <a href="../auth/login/loginPage.php">Login In</a>
       </div>
       <div id="content">
         <div id="movie-slider"></div>
       </div>
     </form>
+    <script>
+      const form = document.getElementById("searchForm");
+      const searchInput = document.querySelector("input");
+
+      form.addEventListener("keydown", function (event) {
+        console.log("key was pressed");
+        // TODO: Don't run if search bar is empty
+        if (event.code === "Enter") {
+          console.log("enter has been pressed");
+          var searchTerm = searchInput.value;
+          console.log("the search term is: " + searchTerm);
+          var url = "../searchPage/searchPage.html?search=" + encodeURIComponent(searchTerm);
+
+          document.location.href = url;
+          event.preventDefault();
+        }
+      });
+    </script>
 
     <div class="about-section">
       <h1>Contact us</h1>
@@ -216,182 +233,6 @@
         </div>
       </footer>
     </div>
-    <script src="/navBar.js"></script>
+    <script src="../navBar.js"></script>
   </body>
-=======
-<head>
-<link rel="stylesheet" href="contact.css">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-
-<!-- NAVIGATION Link-->
-<img id="logo" src="./images/logo.png" alt="LOGO"/>
-<nav id="nav">
-  <ul id="nav-links">
-    <li>
-      <a href="finalProjectHome.html">Home</a>
-    </li>
-    <li>
-      <a href="landingpage.html">Genres</a>
-    </li>
-    <li>
-      <a href="landingpage.html">Favorites</a>
-    </li>
-    <li>
-      <a href="landingpage.html">Watched Movies</a>
-    </li>
-    <li>
-      <a href="contact.html">Contact Us</a>
-    </li>
-  </ul>
-  <div id="burger">
-    <div class="line1"></div>
-    <div class="line2"></div>
-    <div class="line3"></div>
-  </div>
-</nav>
-
-<!-- SEARCH BAR-->
-<div id="topnavContainer">
-  <script src="finalProjectNav.js"></script>
-  <input id="search" type="text" placeholder="Search OMDb: Movies" />
-  <a href="landingpage.html">Sign Up</a>
-  <a href="landingpage.html">Login In</a>
-</div>
-<div id="content">
-  <div id="movie-slider"></div>
-</div>
-
-<div id = 'table1'>
-  <script src="hover.js"></script>
-
-</div>
-
-<div class="about-section">
-  <h1>Contact us</h1>
-  <p>Meet our team of brilliat developers and contact them for any information.</p>
-</div>
-
-<div class="row">
-  <div class="column">
-    <div class="card">
-      <img src="/images/taran.jpg" alt="Jane" style="width: 300px; height: 400px;">
-      <div class="container">
-        <h2>Taran Nudurumati</h2>
-        <p class="title">CEO & Founder</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p><br>
-        <p>TaranNudurumati@gmail.com</p><br>
-        <form action="mailto:tarannudurumati@gmail.com" method="GET">
-          <input type="submit" value="Contact Me" />
-      </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="/images/brandon.jpg" alt="Mike" style="width: 300px; height: 400px;">
-      <div class="container">
-        <h2>Brandon Hubacher</h2>
-        <p class="title">Art Director</p>
-        <p>Web Developer. Renowned web developed.</p><br>
-        <p>Brandon.Hubacher@gmail.com</p><br>
-        <form action="mailto:Brandon.Hubacher@gmail.com" method="GET">
-          <input type="submit" value="Contact Me" />
-      </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="/images/komail.jpg" alt="John" style="width: 300px; height: 400px;">
-      <div class="container">
-        <h2>Komail Wahab</h2>
-        <p class="title">Web Designer</p>
-        <p>Some text that describes me lorem ipsum ipsum lorem.</p><br>
-        <p>komail.wahab@gmail.com</p><br>
-        <form action="mailto:komail.wahab@gmail.com" method="GET">
-          <input type="submit" value="Contact Me" />
-      </form>
-      </div>
-    </div>
-  </div>
-
-  <div class="column">
-    <div class="card">
-      <img src="/images/zach" alt="John" style="width: 300px; height: 400px;">
-      <div class="container">
-        <h2>Zachary Moss</h2>
-        <p class="title">Web Designer</p>
-        <p>Brilliant web Designer.</p><br>
-        <p>Zachary.moss@hotmail.com</p><br>
-        <form action="mailto:komail.wahab@gmail.com" method="GET">
-          <input type="submit" value="Contact Me" />
-      </form>
-      </div>
-    </div>
-  </div>
-
-
-  <div class="contactus">
-    <form action="action_page.php">
-  
-      <label for="fname">First Name</label>
-      <input type="text" id="fname" name="firstname" placeholder="Your name..">
-  
-      <label for="lname">Last Name</label>
-      <input type="text" id="lname" name="lastname" placeholder="Your last name..">
-  
-  
-      <label for="subject">Comments:</label>
-      <textarea id="subject" name="subject" placeholder="Contact us..." style="height:100px;"></textarea>
-  
-      <input type="submit" value="Submit">
-  
-    </form>
-  </div>
-
-
-</div>
-
-
-
-
-
-
-
-
-
-<!-- FOOTER-->
-<div class="footer-dark">
-  <footer>
-      <div class="container">
-          <div class="row">
-              <div class="col-sm-6 col-md-3 item">
-                  <h3>Quick links</h3>
-                  <ul>
-                      <li><a href="contact.html">Contact us</a></li>
-                      <li><a href="landingpage.html">About us</a></li>
-                      <li><a href="landingpage.html">Careers</a></li>
-                  </ul>
-              </div>
-
-              <div class="col-md-6 item text"> <br><br>
-                  <h3>Info</h3>
-                  <p>A website where you can search your favorite movies to see the cast, plot, ratings, etc...</p>
-                  <br>
-                  <p>Creators: Brandon Hubacher, Taran Nudurumati, Zachary Moss, Komail Wahab </p>
-              </div>
-              <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
-          </div>
-          <p class="copyright">Seal Team Six © 03/07/2022</p>
-      </div>
-  </footer>
-</div>
-
-
-</body>
->>>>>>> d2c3b5140c9be05dc8512eae4b629d5d8470ecf7
 </html>
