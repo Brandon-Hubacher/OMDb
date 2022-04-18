@@ -87,7 +87,6 @@
         // TODO: Develop more efficient logic to preclude generating movie page
         // for non movie links
         if (target.tagName === "A" && target.href.match("movie")) {
-          console.log("@@@@@@@@@@@@@@@@@@@@@@@@@@@@");
           console.log(target.href.split("."));
 
           var imdbID = target.href.split("=")[1];

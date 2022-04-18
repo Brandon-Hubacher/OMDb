@@ -25,7 +25,6 @@ window.onload = function () {
   getSearchResults(searchTerm).then(showResults);
 
   function getSearchResults(searchTerm) {
-    console.log("Bad search");
     return fetch(`${BASE_URL}search/${searchTerm}`).then((res) => res.json());
   }
 

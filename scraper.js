@@ -44,7 +44,6 @@ function searchMovies(searchTerm) {
 }
 
 function getMovie(imdbID) {
-  console.log("AHHHHHHHAHHHAHAHHHHAAHHA");
   // If movie page has already been visited, return it from cache
   // if (movieCache[imdbID]) {
   //   console.log("Serving from cache:", imdbID);

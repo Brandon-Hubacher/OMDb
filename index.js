@@ -7,17 +7,17 @@ import { searchMovies, getMovie, TEST } from "./scraper.js";
 const app = express();
 app.use(cors());
 
-app.get("/", (req, res) => {
-  TEST("tt0076759").then(movie => {
-    res.json(movie);
-  })
-});
-
 // app.get("/", (req, res) => {
-//   res.json({
-//     message: "Scraping is Fun!",
-//   });
+//   TEST("tt0076759").then(movie => {
+//     res.json(movie);
+//   })
 // });
+
+app.get("/", (req, res) => {
+  res.json({
+    message: "Scraping is Fun!",
+  });
+});
 
 // path will look like: /search/star wars
 app.get("/search/:title", (req, res) => {
@@ -35,12 +35,12 @@ app.get("/search/:title", (req, res) => {
 // });
 
 //path will look like: /movie/tt0076759
-// app.get("/movie/:imdbID", (req, res) => {
-//   getMovie(req.params.imdbID).then((movie) => {
-//     console.log("APP.GET");
-//     res.json(movie);
-//   });
-// });
+app.get("/movie/:imdbID", (req, res) => {
+  getMovie(req.params.imdbID).then((movie) => {
+    console.log("APP.GET");
+    res.json(movie);
+  });
+});
 
 // app.get("/movie/:imdbID", (req, res) => {
 //   console.log("INSIDE INDEX LALLAALAL");

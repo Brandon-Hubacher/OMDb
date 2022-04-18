@@ -5,7 +5,6 @@ window.onload = function () {
   console.log(imdbID);
 
   function getMovie(imdbID) {
-    console.log("bad get movie");
     return fetch(`${BASE_URL}movie/${imdbID}`).then(
       (res) => res.json());
   }
@@ -252,9 +251,6 @@ window.onload = function () {
   // }
 
   function showMovie(movie) {
-    console.log("HHHHHHHHHHHHHHHHHHHHHHSKDJFH:KDFJKDFHSDLFKJHDSKLFSDKFDSFLh");
-    console.log(movie);
-
     var spanTitle = document.querySelector("#title");
     spanTitle.textContent = movie.title;
 
