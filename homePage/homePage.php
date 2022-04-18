@@ -51,7 +51,7 @@
 
         <!-- Image 1 -->
         <div class="container">
-          <img src="/images/batman.jpg" class="row_poster row_posterlarge image">
+          <img src="../images/batman.jpg" class="row_poster row_posterlarge image">
           <div class="overlay">
             <div class="text">
               Title: The Batman <br>
@@ -64,7 +64,7 @@
 
         <!-- Image 2 -->
         <div class="container">
-          <img src="/images/dune.jpg" class="row_poster row_posterlarge image">          
+          <img src="../images/dune.jpg" class="row_poster row_posterlarge image">          
           <div class="overlay">  
             <div class="text">
               Title: Dune <br>
@@ -77,7 +77,7 @@
 
         <!-- Image 3 -->
         <div class="container">
-          <img src="/images/old.jpg" class="row_poster row_posterlarge image">          
+          <img src="../images/old.jpg" class="row_poster row_posterlarge image">          
           <div class="overlay">  
             <div class="text">
               Title: Dune <br>
@@ -90,7 +90,7 @@
 
         <!-- Image 4 -->
         <div class="container">
-          <img src="/images/kingsman.jpg" class="row_poster row_posterlarge image">          
+          <img src="../images/kingsman.jpg" class="row_poster row_posterlarge image">          
           <div class="overlay">
             <div class="text">
               Title: Dune <br>
@@ -110,7 +110,7 @@
 
         <!-- Image 1 -->
         <div class="container">
-          <img src="/images/deepWater.png" class="row_poster image" width="">          
+          <img src="../images/deepWater.png" class="row_poster image" width="">          
           <div class="overlay">
             <div class="text_international">
               Title: The Batman <br>
@@ -123,7 +123,7 @@
 
         <!-- Image 1 -->
         <div class="container">
-          <img src="/images/turningRed.png" class="row_poster image">          
+          <img src="../images/turningRed.png" class="row_poster image">          
           <div class="overlay">
             <div class="text_international">
               Title: The Batman <br>
@@ -136,7 +136,7 @@
 
         <!-- Image 1 -->
         <div class="container">
-          <img src="/images/windfall.png" class="row_poster image">          
+          <img src="../images/windfall.png" class="row_poster image">          
           <div class="overlay">
             <div class="text_international">
               Title: The Batman <br>
@@ -149,7 +149,7 @@
 
         <!-- Image 1 -->
         <div class="container">
-          <img src="/images/godfather.png" class="row_poster image">          
+          <img src="../images/godfather.png" class="row_poster image">          
           <div class="overlay">
             <div class="text_international">
               Title: The Batman <br>
@@ -162,7 +162,7 @@
 
         <!-- Image 1 -->
         <div class="container">
-          <img src="/images/blackCrab.jpg" class="row_poster image">          
+          <img src="../images/blackCrab.jpg" class="row_poster image">          
           <div class="overlay">
             <div class="text_international">
               Title: The Batman <br>
@@ -181,7 +181,7 @@
       <div class="row_posters">
         <!-- Image 1 -->
         <div class="container">
-          <img src="/images/trainToBusan.png" class="row_poster image" height="500px" width="200px">          
+          <img src="../images/trainToBusan.png" class="row_poster image" height="500px" width="200px">          
           <div class="overlay">
             <div class="text_international">
               Title: The Batman <br>
@@ -194,7 +194,7 @@
 
         <!-- Image 2 -->
         <div class="container">
-          <img src="/images/godfather.png" class="row_poster image">          
+          <img src="../images/godfather.png" class="row_poster image">          
           <div class="overlay">
             <div class="text_international">
               Title: The Batman <br>
@@ -207,7 +207,7 @@
 
         <!-- Image 3 -->
         <div class="container">
-          <img src="/images/amour.png" class="row_poster image">          
+          <img src="../images/amour.png" class="row_poster image">          
           <div class="overlay">
             <div class="text_international">
               Title: The Batman <br>
@@ -220,7 +220,7 @@
 
         <!-- Image 4 -->
         <div class="container">
-          <img src="/images/roma.png" class="row_poster image">          
+          <img src="../images/roma.png" class="row_poster image">          
           <div class="overlay">
             <div class="text_international">
               Title: The Batman <br>
@@ -233,7 +233,7 @@
 
         <!-- Image 1 -->
         <div class="container">
-          <img src="/images/13assassins.png" class="row_poster image">          
+          <img src="../images/13assassins.png" class="row_poster image">          
           <div class="overlay">
             <div class="text_international">
               Title: The Batman <br>
@@ -259,9 +259,9 @@
                       <br>
                       <p>Creators: Brandon Hubacher, Taran Nudurumati, Zachary Moss, Komail Wahab </p>
                       <ul>
-                          <li><a href="/contactPage/contactPage.html">Contact us</a></li>
-                          <li><a href="/dummyPage.html">About us</a></li>
-                          <li><a href="/dummyPage.html">Careers</a></li>
+                          <li><a href="../contactPage/contactPage.html">Contact us</a></li>
+                          <li><a href="../dummyPage.html">About us</a></li>
+                          <li><a href="../dummyPage.html">Careers</a></li>
                       </ul>
                   </div>
 
