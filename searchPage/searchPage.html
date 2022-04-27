@@ -25,7 +25,9 @@
           <a href="../favoritesPage/favoritesPage.php">Favorites</a>
         </li>
         <li>
-          <a href="../watchedMoviesPage/watchedMoviesPage.html">Watched Movies</a>
+          <a href="../watchedMoviesPage/watchedMoviesPage.html"
+            >Watched Movies</a
+          >
         </li>
         <li>
           <a href="../contactPage/contactPage.html">Contact Us</a>
@@ -65,7 +67,9 @@
           console.log("enter has been pressed");
           var searchTerm = searchInput.value;
           console.log("the search term is: " + searchTerm);
-          var url = "../searchPage/searchPage.html?search=" + encodeURIComponent(searchTerm);
+          var url =
+            "../searchPage/searchPage.html?search=" +
+            encodeURIComponent(searchTerm);
 
           document.location.href = url;
           event.preventDefault();
@@ -94,6 +98,9 @@
           console.log("imdbID: " + imdbID);
           var url =
             "/moviePage/moviePage.html?imdbID=" + encodeURIComponent(imdbID);
+
+          console.log(target.textContent);
+          // a.textContent = movie.title;
 
           document.location.href = url;
 

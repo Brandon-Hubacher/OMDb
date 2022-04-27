@@ -22,7 +22,7 @@
 
     <!-- NAVIGATION Link-->
     <div id = 'table1'>
-      <script src="hover.js"></script>
+      <!-- <script src="hover.js"></script> -->
 
     </div><br><br>
 

@@ -10,7 +10,6 @@
     <title>Movie</title>
   </head>
   <body>
-
     <a href="../homePage/homePage.php" class="logoLink"
       ><img id="logo" src="../images/logo.png" alt="LOGO"
     /></a>
@@ -27,7 +26,9 @@
           <a href="../favoritesPage/favoritesPage.php">Favorites</a>
         </li>
         <li>
-          <a href="../watchedMoviesPage/watchedMoviesPage.html">Watched Movies</a>
+          <a href="../watchedMoviesPage/watchedMoviesPage.html"
+            >Watched Movies</a
+          >
         </li>
         <li>
           <a href="../contactPage/contactPage.html">Contact Us</a>
@@ -67,7 +68,9 @@
           console.log("enter has been pressed");
           var searchTerm = searchInput.value;
           console.log("the search term is: " + searchTerm);
-          var url = "../searchPage/searchPage.html?search=" + encodeURIComponent(searchTerm);
+          var url =
+            "../searchPage/searchPage.html?search=" +
+            encodeURIComponent(searchTerm);
 
           document.location.href = url;
           event.preventDefault();
@@ -76,28 +79,46 @@
     </script>
     <div class="row1">
       <span id="title"></span>
-      <span> | </span>
-      <span id="imdbRating"></span>
+      <!-- <span> | </span>
+      <span id="imdbRating"></span> -->
     </div>
     <div class="row2">
+      <span id="imdbRating"></span>
+      <span> | </span>
       <span id="datePublished"></span>
       <span> | </span>
       <span id="contentRating"></span>
       <span> | </span>
       <span id="runTime"></span>
+      <!-- <form action="">
+        <input type="radio" name="" id=""></input>
+      </form> -->
+      <button id="favoriteButton"><span></span> Add to favorites</button>
     </div>
     <!-- Float this left and have genre and summary floated right -->
     <div class="trailer">
       <img id="poster" src="" alt="" />
+      <img id="thumbnail" src="" alt="" />
+      <iframe id="trailerVideo" src="" frameborder="0"></iframe>
+
+      <span class="rightOfTrailer">
+        <span id="genres">
+          Genres
+          <ul id="genresList"></ul>
+        </span>
+        <div id="summaryTitle">Summary</div>
+        <span id="summary"></span>
+      </span>
     </div>
 
-    <div class="rightOfTrailer">
+    <!-- <div class="rightOfTrailer">
       <span id="genres">
         Genres
         <ul id="genresList"></ul>
       </span>
+      Summary
       <span id="summary"></span>
-    </div>
+    </div> -->
     <!-- <script src="../createHead.js"></script> -->
     <script src="moviePage.js"></script>
     <script src="../navBar.js"></script>

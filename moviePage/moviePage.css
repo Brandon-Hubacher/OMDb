@@ -1,5 +1,6 @@
 body {
-  background: gray;
+  background: black;
+  color: white;
 }
 
 .trailer img {
@@ -8,4 +9,64 @@ body {
 
 .rightOfTrailer {
   clear: both;
+}
+
+#trailerVideo {
+  /* height: 342px; */
+  /* height: 500px; */
+  aspect-ratio: 16 / 9;
+}
+
+#title {
+  font-size: 2em;
+}
+
+.row2 {
+  /* background: gray; */
+  height: 4em;
+  font-size: 1.25em;
+  word-spacing: 0.5em;
+}
+
+#runTime {
+  word-spacing: 0em;
+}
+
+#genres {
+  font-size: 1.25em;
+}
+
+#genresList {
+  /* display: inline; */
+  list-style: none;
+  display: flex;
+  gap: 2em;
+  text-decoration: none;
+}
+
+.rightOfTrailer {
+  float: right;
+}
+
+#summaryTitle {
+  font-size: 1.25em;
+  padding: 40px 0 0 0;
+}
+
+.trailer {
+  display: flex;
+}
+
+#favoriteButton {
+  position: relative;
+  display: block;
+  height: 2em;
+  width: var();
+  top: 20%;
+  background: gray;
+  color: white;
+}
+
+#favoriteButton span {
+  /* font-size: 2em; */
 }
