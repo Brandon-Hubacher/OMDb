@@ -8,25 +8,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../auth.css" />
+    <link rel="stylesheet" href="./main.css">
     <title>Sign Up</title>
   </head>
   <body>
-    <h1>Sign Up</h1>
+    <div class="container">
     <form action="register.php" method="POST">
-      <label for="username">Username</label><br />
-      <input type="text" id="username" name="username" />
+      <h1 class="form__title">Sign up</h1>
+
+      <div class="form__input-group">
+                <input type="text" class="form__input" id="username" name="username" autofocus placeholder="Username">
+            </div>
 
       <br />
 
-      <label for="password">Password</label><br />
-      <input type="text" id="password" name="password" />
-
+      <div class="form__input-group">
+                <input type="password" class="form__input" id="password" name="password" autofocus placeholder="Password">
+            </div>
       <br />
 
-      <button type="submit">Sign Up</button>
+      <button class="form__button" type="submit">Continue</button>
 
-      <p>Already have an account? <a href="../login/loginPage.php">Login</a></p>
+      <p>Already have an account? <a href="../login/loginPage.php"> Login</a></p>
+      <p>Click here to go back to <a href="../../homePage/homePage.php">Homepage</a></p>
     </form>
 
     <?php
@@ -35,5 +39,9 @@
         echo '<font color="#FF0000"><p>That username is taken</p>';
       }
     ?>
+    </div>
+
+
+
   </body>
 </html>

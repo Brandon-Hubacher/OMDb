@@ -8,29 +8,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../auth.css">
+    <link rel="stylesheet" href="./mainl.css">
     <title>Login</title>
   </head>
   <body>
-    <h1>Login</h1>
+    <div class="container">
     <form action="login.php" method="POST">
-      <label for="username" id="usernameLabel">Username</label><br />
-      <input type="text" id="username" name="username" />
+      <h1 class="form__title">Login</h1>
+
+      <div class="form__input-group">
+                <input type="text" class="form__input" id="username" name="username" autofocus placeholder="Username">
+            </div>
 
       <br />
 
-      <label for="password" id="passwordLabel">Password</label><br />
-      <input type="text" id="password" name="password" />
-
+      <div class="form__input-group">
+                <input type="password" class="form__input" id="password" name="password" autofocus placeholder="Password">
+            </div>
       <br />
 
-      <p>Don't have an account yet? <a href="../register/registerPage.php">Sign Up</a></p>
+      <button class="form__button" type="submit">Login</button>
 
-      <br />
-
-      <!-- Default type for button is submit so it is not included -->
-      <button>Login</button>
-      <!-- <input type="submit" value="continue" name="Login" /> -->
+      <p>Don't have an account yet? <a href="../register/registerPage.php"> Sign up</a></p>
+      <p>Click here to go back to <a href="../../homePage/homePage.php">Homepage</a></p>
     </form>
 
     <?php
@@ -39,5 +39,7 @@
         echo '<font color="#FF0000"><p>Incorrect username or password</p>';
       }
     ?>
+    </div>
+
   </body>
 </html>
