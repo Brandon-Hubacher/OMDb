@@ -38,8 +38,8 @@ window.onload = function () {
       li.appendChild(img);
       img.src = movie.image;
       const a = document.createElement("a");
-      a.textContent = movie.title;
-      a.href = "/movie.html?imdbID=" + movie.imdbID;
+      a.textContent = '    ' + ' ' + movie.title;
+      a.href = "/moviePage.html?imdbID=" + movie.imdbID;
       li.appendChild(a);
       // console.log(li);
       resultsList.appendChild(li);

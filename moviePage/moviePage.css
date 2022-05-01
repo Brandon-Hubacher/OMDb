@@ -1,6 +1,7 @@
 body {
   background: black;
   color: white;
+  text-align: center;
 }
 
 .trailer img {
@@ -9,6 +10,10 @@ body {
 
 .rightOfTrailer {
   clear: both;
+}
+
+a {
+  color: white;
 }
 
 #trailerVideo {
@@ -28,8 +33,25 @@ body {
   word-spacing: 0.5em;
 }
 
+#summaryfont {
+  word-spacing: normal;
+}
+
+#favbutton {
+  display: flex;
+  text-align: center;
+  justify-content: center;
+}
+
 #runTime {
   word-spacing: 0em;
+}
+
+#genrenames {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding-right: 1cm;
 }
 
 #genres {
@@ -45,7 +67,8 @@ body {
 }
 
 .rightOfTrailer {
-  float: right;
+  /* float: right; */
+  justify-content: center;
 }
 
 #summaryTitle {
@@ -55,6 +78,7 @@ body {
 
 .trailer {
   display: flex;
+  justify-content: center;
 }
 
 #favoriteButton {

@@ -20,15 +20,7 @@
           <a href="../homePage/homePage.php">Home</a>
         </li>
         <li>
-          <a href="../genresPage/genresPage.html">Genres</a>
-        </li>
-        <li>
           <a href="../favoritesPage/favoritesPage.php">Favorites</a>
-        </li>
-        <li>
-          <a href="../watchedMoviesPage/watchedMoviesPage.html"
-            >Watched Movies</a
-          >
         </li>
         <li>
           <a href="../contactPage/contactPage.html">Contact Us</a>
@@ -57,6 +49,7 @@
         <div id="movie-slider"></div>
       </div>
     </form>
+    <br /><br />
     <script>
       const form = document.getElementById("searchForm");
       const searchInput = document.querySelector("input");
@@ -93,22 +86,24 @@
       <!-- <form action="">
         <input type="radio" name="" id=""></input>
       </form> -->
-      <button id="favoriteButton"><span></span> Add to favorites</button>
+      <div id="genrenames">
+        <ul id="genresList"></ul>
+      </div>
+      <div id="summaryfont">
+        <span id="summary"></span>
+      </div>
+      <div id="favbutton">
+        <button id="favoriteButton"><span></span> Add to favorites</button>
+      </div>
     </div>
+    <br /><br />
     <!-- Float this left and have genre and summary floated right -->
+
+    <ul id="genresList"></ul>
     <div class="trailer">
       <img id="poster" src="" alt="" />
       <img id="thumbnail" src="" alt="" />
       <iframe id="trailerVideo" src="" frameborder="0"></iframe>
-
-      <span class="rightOfTrailer">
-        <span id="genres">
-          Genres
-          <ul id="genresList"></ul>
-        </span>
-        <div id="summaryTitle">Summary</div>
-        <span id="summary"></span>
-      </span>
     </div>
 
     <!-- <div class="rightOfTrailer">
