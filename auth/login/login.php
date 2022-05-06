@@ -24,7 +24,7 @@
 
   // Verify the result
   if (!$result) {
-    die("Query failed: ($db->error <br> SQL query = $query");
+    die("Query failed: ($mysqli->error <br> SQL query = $query");
   }
   else
   {
@@ -37,7 +37,13 @@
     {
       if(isset($_SESSION['current_url']))
       {
-        setcookie("login", "testLogin", time()+120, "/");
+	//$favorites = isset($_COOKIE['favorites']) ? $_COOKIE['favorites'] : "[Default]";
+        //$favorites = json_decode($favorites);
+        //setcookie('favorites', json_encode($favorites), time()+1000000, "/");
+        //setcookie($username, $password, time()+1000000, "/");
+	setcookie("username", $username, time()+1000000, "/");
+	setcookie("password", $password, time()+1000000, "/");
+        //header("Location: " . "/cs329e-bulko/branhub/test/OMDb/homePage/homePage.php");
         header("Location: " . $_SESSION['current_url']);
       }
       else

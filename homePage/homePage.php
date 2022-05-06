@@ -1,5 +1,6 @@
 <?php
   session_start();
+  $_SESSION['current_url'] = "http" . "://" . $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];
 ?>
 
 
@@ -78,7 +79,7 @@
                   </div>
                   <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
               </div>
-              <p class="copyright">Seal Team Six © 03/07/2022</p>
+              <p class="copyright">Seal Team Six Â© 03/07/2022</p>
           </div>
       </footer>
   </div>

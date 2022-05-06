@@ -57,12 +57,12 @@
         // TODO: Don't run if search bar is empty
         if (event.code === "Enter") {
           console.log("enter has been pressed");
+          console.log(target.textContent);
           var searchTerm = searchInput.value;
           console.log("the search term is: " + searchTerm);
           var url =
             "../searchPage/searchPage.html?search=" +
             encodeURIComponent(searchTerm);
-
           document.location.href = url;
           event.preventDefault();
         }
@@ -89,7 +89,10 @@
           console.log("href: " + target.href);
           console.log("imdbID: " + imdbID);
           var url =
-            "/moviePage/moviePage.html?imdbID=" + encodeURIComponent(imdbID);
+            "../moviePage/moviePage.php?imdbID=" +
+            encodeURIComponent(imdbID) +
+            "?title=" +
+            encodeURIComponent(target.textContent.trim());
 
           console.log(target.textContent);
           // a.textContent = movie.title;
